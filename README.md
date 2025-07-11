@@ -1,3 +1,3 @@
 # Trussme Services 
 Run with 
-- npm run dev
+- pnpm run dev
