@@ -6,7 +6,7 @@ function Condo() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
       <h1 className="text-3xl font-bold mb-4 text-black">Book this condo</h1>
       <Carousel />
-      <p className="mb-6 text-lg">Interested in booking this place?</p>
+      <p className="my-6 text-lg text-black">Interested in booking this place?</p>
       <a
         href="http://kurt-giebel.lodgify.com"
         target="_blank"
