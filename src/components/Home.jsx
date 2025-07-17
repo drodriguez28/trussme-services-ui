@@ -12,7 +12,7 @@ function Home() {
         {/* 2. Header container */}
         <h1 className="text-3xl font-bold mb-4">Home/Auto care</h1>
         <p className="text-lg">
-          Save time by getting all your cleaning needs meet on your personal or
+          Save time by getting all your cleaning needs met on your personal or
           business assets. We are here to provide a hassle free and efficient
           process for our clients. Only high quality work, all in one place.
         </p>

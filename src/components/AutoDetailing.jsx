@@ -18,14 +18,14 @@ function AutoDetailing() {
       id: '2',
       name: 'Basic Package',
       description:
-        'Full deep clean of exterior, including tire cleaning/tire shine, wheel rim cleaning inside and outside, fender cleaning, condition outside black liner. Gas tank hinge',
+        'Exterior and interior basic clean, including tire cleaning/tire shine, wheel rim cleaning inside and outside, fender cleaning, condition outside black liner. Gas tank hinge. Vacuum and wipe down all areas inside car. Clean floor mats and condition. Clean glass inside and outside. Clean door hinges',
       prices: 'Sedan $55, SUV $75, Truck $95',
     },
     {
       id: '3',
       name: 'Premium Package',
       description:
-        'A page consisting of freely configurable and rearrangeable content modules.',
+        'Exterior and interior deep clean, including tire cleaning/tire shine, wheel rim cleaning inside and outside, fender cleaning, condition outside black liner. Gas tank hinge. . Vacuum and wipe down all areas inside car. Clean leather and condition. Clean floor mats and condition. Clean glass inside and outside. Clean door hinges',
       prices: 'Sedan $70, SUV $90, Truck $110',
     },
     {
