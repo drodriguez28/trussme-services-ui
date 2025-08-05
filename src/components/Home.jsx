@@ -12,7 +12,7 @@ function Home() {
         {/* 2. Header container */}
         <h1 className="text-3xl font-bold mb-4">Home/Auto care</h1>
         <p className="text-lg">
-          Save time by getting all your cleaning needs met on your personal or
+          Save time by getting all your cleaning needs meet on your personal or
           business assets. We are here to provide a hassle free and efficient
           process for our clients. Only high quality work, all in one place.
         </p>
@@ -27,13 +27,13 @@ function Home() {
         />
         <Cards
           title="Personal/Business Cleaning"
-          description="We offer many kinds of plans to cater to the individual/business. For either consistent care on a weekly/bi-weekly or a monthly basis."
+          description="We offer many kinds of plans to cater to the individual/business. For either consistent car, weekly/bi-weekly, or a monthly basis"
           link="/cleaning"
         />
         <div className="md:col-span-2 flex justify-center w-full">
           <Cards
             title="Landscaping"
-            description="Get your yard or business looking professional with our landscaping option to maintain a beautiful aesthetic for clients/employees to admire"
+            description="Get your yard for your home maintained without having to do it yourself. We are here to make it look good for your friends and family. For businesses looking, we want to help maintain a professional and beautiful aesthetic for clients/employees"
             link="/landscaping"
           />
         </div>
