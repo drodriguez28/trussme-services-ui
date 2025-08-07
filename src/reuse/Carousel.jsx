@@ -1,12 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
-const images = [
-  "/images/condo.png",
-  "/images/condo2.png",
-  "/images/condo3.png",
-];
-
-function Carousel() {
+function Carousel({ images }) {
   const [current, setCurrent] = useState(0);
 
   const prevSlide = () => {
@@ -17,23 +11,39 @@ function Carousel() {
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <div className="relative w-full max-w-md flex flex-col items-center">
-      <img
-        src={images[current]}
-        alt={`Slide ${current + 1}`}
-        className="rounded shadow-lg w-full h-64 object-cover mb-4"
-      />
+      <div className="relative w-full h-80 mb-4">
+        {images.map((src, idx) => (
+          <img
+            key={idx}
+            src={src}
+            alt={`Slide ${idx + 1}`}
+            className={`
+  absolute top-0 left-0 w-full h-80 object-cover rounded shadow-lg transition-opacity duration-700
+  ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}
+`}
+            style={{ transitionProperty: 'opacity' }}
+          />
+        ))}
+      </div>
       <div className="flex justify-between w-full px-4">
         <button
           onClick={prevSlide}
-          className="px-3 py-1 bg-black rounded hover:bg-gray-300"
+          className="px-3 py-1 bg-black text-white rounded hover:bg-gray-300 hover:text-black"
         >
           Prev
         </button>
         <button
           onClick={nextSlide}
-          className="px-3 py-1 bg-black rounded hover:bg-gray-300"
+          className="px-3 py-1 bg-black text-white rounded hover:bg-gray-300 hover:text-black"
         >
           Next
         </button>
@@ -50,4 +60,4 @@ function Carousel() {
   );
 }
 
-export default Carousel
+export default Carousel;

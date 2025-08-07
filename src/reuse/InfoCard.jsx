@@ -14,13 +14,13 @@ export const InfoCard = () => {
         Hours
       </h6>
       <ul className="font-normal text-gray-700 dark:text-gray-400 list-disc list-inside">
-        <li>Monday 9am-5pm</li>
-        <li>Tuesday 9am-5pm</li>
-        <li>Wednesday 9am-5pm</li>
-        <li>Thursday 9am-5pm</li>
-        <li>Friday 9am-5pm</li>
-        <li>Saturday Closed</li>
-        <li>Sunday Closed</li>
+        <li>Monday 9am-9pm</li>
+        <li>Tuesday 9am-9pm</li>
+        <li>Wednesday 9am-9pm</li>
+        <li>Thursday 9am-9pm</li>
+        <li>Friday 9am-9pm</li>
+        <li>Saturday 9am-9pm</li>
+        <li>Sunday 9am-9pm</li>
       </ul>
       <p className="font-normal text-gray-700 dark:text-gray-400 mt-4">
         (404) 860-4223
