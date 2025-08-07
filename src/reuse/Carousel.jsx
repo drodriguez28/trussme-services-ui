@@ -20,16 +20,16 @@ function Carousel({ images }) {
 
   return (
     <div className="relative w-full max-w-md flex flex-col items-center">
-      <div className="relative w-full h-64 mb-4">
+      <div className="relative w-full h-80 mb-4">
         {images.map((src, idx) => (
           <img
             key={idx}
             src={src}
             alt={`Slide ${idx + 1}`}
             className={`
-              absolute top-0 left-0 w-full h-64 object-cover rounded shadow-lg transition-opacity duration-700
-              ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}
-            `}
+  absolute top-0 left-0 w-full h-80 object-cover rounded shadow-lg transition-opacity duration-700
+  ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}
+`}
             style={{ transitionProperty: 'opacity' }}
           />
         ))}
