@@ -11,14 +11,14 @@ function Cleaning() {
       name: 'Residential',
       type: 'Apartment/Townhome/House',
       description:
-        'Let us take care of your home, we treat it like its our own, with love, respect, and care. We make sure to use proper products for all surface types (i.e. stainless steel and wood).',
+        'Let us take care of your home, we treat it like its our own, with love, respect, and care. We make sure to use proper products and procedures for all types of surfaces .',
     },
     {
       id: '2',
       name: 'Commercial',
       type: 'Business Buildings/Leased out offices/ Realty companies',
       description:
-        'Have a business and need it cleaned for your employees/Clients? We are here to offer you a easy solution for your business to be taken care of on a daily basis or what ever schedule you would like. Its our job to maintain a clean and professional environment, so all you have to do is focus on your business.',
+        'Have a business and need it cleaned for your employees/clients? We are here to offer you a easy solution for your business to be taken care of on a daily basis or create a schedule you would like us to come. Its our job to maintain a clean and professional environment, so all you have to do is focus on your business/clients. we want to creat a safe, clean, and inviting environment',
     },
     {
       id: '3',

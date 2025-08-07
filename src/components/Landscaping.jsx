@@ -10,14 +10,14 @@ function Landscaping() {
       name: 'Residential',
       type: 'Townhome/House',
       description:
-        'We offer landscaping for clients that need their lawn mowed, bushes hedged, and weed eating. Also edging of curb and driveway to leave a clean look We can cut off simple tree limbs that you wish to have removed as well',
+        'We offer landscaping for clients that need their lawn mowed, bushes hedged, and weed eating. Also edging of curb and driveway to leave a clean look We can cut off simple tree limbs that you wish to have removed as well.',
     },
     {
       id: '2',
       name: 'Commercial',
       type: 'Property management companies/Realty companies',
       description:
-        'If you have either a business building or home you are flipping for your realty company, we are here to add value to the property, by maintaining the initial view of your assets, to look perfect for incoming clients/potential customers',
+        'If you have a business building, we are here to add value to the property, by maintaining the initial view of your property, to look professional. If realty company we would love to work on homes your flipping to do the landscaping.',
     }
   ];
   return (
