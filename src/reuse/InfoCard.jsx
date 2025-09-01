@@ -3,7 +3,7 @@ import { Card } from "flowbite-react";
 
 export const InfoCard = () => {
   return (
-    <Card className="max-w-sm" imgSrc="/images/profile-pic.png" horizontal>
+    <Card className="max-w-sm" imgSrc="/images/shybur.png" horizontal>
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         Service Areas
       </h5>
