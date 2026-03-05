@@ -1,38 +1,39 @@
-import React from 'react'
-import { Table } from '@contentful/f36-components';
-import { Link } from 'react-router-dom'
-
-
+import React, { useEffect } from "react";
+import { Table } from "@contentful/f36-components";
+import { Link } from "react-router-dom";
 
 function Cleaning() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const contentTypes = [
     {
-      id: '1',
-      name: 'Residential',
-      type: 'Apartment/Townhome/House',
+      id: "1",
+      name: "Residential",
+      type: "Apartment/Townhome/House",
       description:
-        'Let us take care of your home, we treat it like its our own, with love, respect, and care. We make sure to use proper products and procedures for all types of surfaces .',
+        "Let us take care of your home, we treat it like its our own, with love, respect, and care. We make sure to use proper products and procedures for all types of surfaces .",
     },
     {
-      id: '2',
-      name: 'Commercial',
-      type: 'Business Buildings/Leased out offices/ Realty companies',
+      id: "2",
+      name: "Commercial",
+      type: "Business Buildings/Leased out offices/ Realty companies",
       description:
-        'Have a business and need it cleaned for your employees/clients? We are here to offer you a easy solution for your business to be taken care of on a daily basis or create a schedule you would like us to come. Its our job to maintain a clean and professional environment, so all you have to do is focus on your business/clients. we want to creat a safe, clean, and inviting environment',
+        "Have a business and need it cleaned for your employees/clients? We are here to offer you a easy solution for your business to be taken care of on a daily basis or create a schedule you would like us to come. Its our job to maintain a clean and professional environment, so all you have to do is focus on your business/clients. we want to creat a safe, clean, and inviting environment",
     },
     {
-      id: '3',
-      name: 'Construction',
-      type: 'Work with Construction companies',
+      id: "3",
+      name: "Construction",
+      type: "Work with Construction companies",
       description:
-        'We work with construction companies so all they have to do is the project at hand, we take care of the work environment to maintain a safe work space for employees and to contribute to a faster and seamless project.',
+        "We work with construction companies so all they have to do is the project at hand, we take care of the work environment to maintain a safe work space for employees and to contribute to a faster and seamless project.",
     },
   ];
   return (
     <div className="max-w-3xl mx-auto mt-10 px-4">
       <h1 className="text-3xl font-bold mb-8">Cleaning</h1>
       <Table>
-        <Table.Head >
+        <Table.Head>
           <Table.Row>
             <Table.Cell>Service</Table.Cell>
             <Table.Cell>Type</Table.Cell>
@@ -49,17 +50,15 @@ function Cleaning() {
           ))}
         </Table.Body>
       </Table>
-      <div className='mt-8 '>
-        <Link
-          to="/contact-me"
-        >
+      <div className="mt-8 ">
+        <Link to="/contact-me">
           <button className="block w-full text-center px-4 py-3 bg-green-600 text-white rounded font-semibold transition">
             Click here to book !
           </button>
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
-export default Cleaning
+export default Cleaning;

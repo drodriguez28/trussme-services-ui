@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { Table } from '@contentful/f36-components';
 import Carousel from '../reuse/Carousel';
 import { Link } from 'react-router-dom'
 
 function AutoDetailing() {
+    
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   const contentTypes = [
     {
       id: '1',
