@@ -24,7 +24,7 @@ function Landscaping() {
   ];
   return (
     <div className="max-w-3xl mx-auto mt-10 px-4">
-      <h1 className="text-3xl font-bold mb-8">Landscaping</h1>
+      <h1 className="text-3xl font-bold mb-8 text-white">Landscaping</h1>
       <Table>
         <Table.Head>
           <Table.Row>

@@ -41,7 +41,7 @@ function AutoDetailing() {
   ];
   return (
     <div className="max-w-3xl mx-auto mt-10 px-4">
-      <h1 className="text-3xl font-bold mb-8">Auto Detailing Services</h1>
+      <h1 className="text-3xl font-bold mb-8 text-white">Auto Detailing Services</h1>
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
         <div className='w-full max-w-md my-8'>
           <Carousel images={[

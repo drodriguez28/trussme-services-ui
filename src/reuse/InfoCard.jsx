@@ -13,7 +13,7 @@ export const InfoCard = () => {
       <h6 className="text-lg font-semibold mt-4 text-white">
         Hours
       </h6>
-      <ul className="font-normal text-gray-700list-disc list-inside">
+      <ul className="font-normal text-white list-disc list-inside">
         <p>Monday 9am-9pm</p>
         <p>Tuesday 9am-9pm</p>
         <p>Wednesday 9am-9pm</p>
