@@ -48,6 +48,17 @@ function AutoDetailing() {
               "/images/ad6.png",
               "/images/ad7.png",
               "/images/ad8.png",
+              "/images/ad9.png",
+              "/images/ad10.png",
+              "/images/ad11.png",
+              "/images/ad12.png",
+              "/images/ad13.png",
+              "/images/ad14.png",
+              "/images/ad15.png",
+              "/images/ad16.png",
+              "/images/ad17.png",
+              "/images/ad18.png",
+              "/images/ad19.png",
             ]}
           />
         </div>
