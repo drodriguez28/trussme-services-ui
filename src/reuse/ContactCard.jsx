@@ -22,13 +22,13 @@ export function ContactCard({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <a
           href={`tel:${phone}`}
-          className="inline-block bg-yellow-400 hover:bg-yellow-500 text-white text-xl px-8 py-3 rounded transition"
+          className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black text-xl px-8 py-3 rounded transition"
         >
           Call Us: {phone}
         </a>
         <a
           href={`sms:${phone}`}
-          className="inline-block bg-yellow-400 hover:bg-yellow-500 text-white text-xl px-8 py-3 rounded transition"
+          className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black text-xl px-8 py-3 rounded transition"
         >
           Text Us: {phone}
         </a>
@@ -43,7 +43,7 @@ export function ContactCard({
         </a>
         <button
           onClick={handleCopyEmail}
-          className="mt-4 bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded transition flex items-center justify-center gap-2 mx-auto"
+          className="mt-4 bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded transition flex items-center justify-center gap-2 mx-auto"
         >
           <svg
             className="w-5 h-5"

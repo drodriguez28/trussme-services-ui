@@ -1,54 +1,53 @@
 import React, { useEffect } from "react";
-import { Table } from "@contentful/f36-components";
-import { Link } from "react-router-dom";
+import PricingCard from "../reuse/PricingCard";
 
 function Landscaping() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const contentTypes = [
     {
       id: "1",
       name: "Residential",
-      type: "Townhome/House",
-      description:
-        "We offer landscaping for clients that need their lawn mowed, bushes hedged, and weed eating. Also edging of curb and driveway to leave a clean look We can cut off simple tree limbs that you wish to have removed as well.",
+      type: "Townhome / House",
+      description: [
+        "Lawn mowing",
+        "Bush hedging",
+        "Weed eating",
+        "Curb and driveway edging for a clean look",
+        "Simple tree limb removal on request",
+      ],
     },
     {
       id: "2",
       name: "Commercial",
-      type: "Property management companies/Realty companies",
-      description:
-        "If you have a business building, we are here to add value to the property, by maintaining the initial view of your property, to look professional. If realty company we would love to work on homes your flipping to do the landscaping.",
+      type: "Property management companies / realty companies",
+      description: [
+        "Maintain business properties to keep a professional appearance",
+        "Add curb appeal and value through consistent upkeep",
+        "Landscaping support for realty properties and flips",
+      ],
     },
   ];
+
   return (
-    <div className="max-w-3xl mx-auto mt-10 px-4">
+    <div className="max-w-6xl mx-auto mt-10 px-4">
       <h1 className="text-3xl font-bold mb-8 text-white">Landscaping</h1>
-      <Table>
-        <Table.Head>
-          <Table.Row>
-            <Table.Cell>Service</Table.Cell>
-            <Table.Cell>Type</Table.Cell>
-            <Table.Cell>Description</Table.Cell>
-          </Table.Row>
-        </Table.Head>
-        <Table.Body>
+
+      <div className="flex flex-col items-center justify-center bg-gray-50 rounded-xl px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {contentTypes.map((service) => (
-            <Table.Row key={service.id}>
-              <Table.Cell>{service.name}</Table.Cell>
-              <Table.Cell>{service.type}</Table.Cell>
-              <Table.Cell>{service.description}</Table.Cell>
-            </Table.Row>
+            <PricingCard
+              key={service.id}
+              title={service.name}
+              description={[`Type: ${service.type}`, ...service.description]}
+              pricing={[]}
+              buttonLabel="Book this service"
+              buttonTo="/contact-me"
+            />
           ))}
-        </Table.Body>
-      </Table>
-      <div className="mt-8 ">
-        <Link to="/contact-me">
-          <button className="block w-full text-center px-4 py-3 bg-green-600 text-white rounded font-semibold transition">
-            Click here to book !
-          </button>
-        </Link>
+        </div>
       </div>
     </div>
   );
