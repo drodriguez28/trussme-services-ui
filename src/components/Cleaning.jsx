@@ -1,39 +1,48 @@
 import React, { useEffect } from "react";
-import { Table } from "@contentful/f36-components";
 import Carousel from "../reuse/Carousel";
-import { Link } from "react-router-dom";
+import PricingCard from "../reuse/PricingCard";
 
 function Cleaning() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const contentTypes = [
     {
       id: "1",
       name: "Residential",
-      type: "Apartment/Townhome/House",
-      description:
-        "Let us take care of your home, we treat it like its our own, with love, respect, and care. We make sure to use proper products and procedures for all types of surfaces .",
+      type: "Apartment / Townhome / House",
+      description: [
+        "Let us take care of your home with love, respect, and care.",
+        "We use proper products and procedures for all surface types.",
+      ],
     },
     {
       id: "2",
       name: "Commercial",
-      type: "Business Buildings/Leased out offices/ Realty companies",
-      description:
-        "Have a business and need it cleaned for your employees/clients? We are here to offer you a easy solution for your business to be taken care of on a daily basis or create a schedule you would like us to come. Its our job to maintain a clean and professional environment, so all you have to do is focus on your business/clients. we want to creat a safe, clean, and inviting environment",
+      type: "Business buildings / leased offices / realty companies",
+      description: [
+        "Need cleaning for employees and clients? We offer an easy solution.",
+        "We can clean daily or follow a custom schedule that works for you.",
+        "Our goal is a safe, clean, and professional environment so you can focus on your business.",
+      ],
     },
     {
       id: "3",
       name: "Construction",
-      type: "Work with Construction companies",
-      description:
-        "We work with construction companies so all they have to do is the project at hand, we take care of the work environment to maintain a safe work space for employees and to contribute to a faster and seamless project.",
+      type: "Construction company support",
+      description: [
+        "We partner with construction companies to keep job sites clean and safe.",
+        "This helps support faster, smoother project delivery.",
+      ],
     },
   ];
+
   return (
-    <div className="max-w-3xl mx-auto mt-10 px-4">
+    <div className="max-w-6xl mx-auto mt-10 px-4">
       <h1 className="text-3xl font-bold mb-8 text-white">Cleaning</h1>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
+
+      <div className="flex flex-col items-center justify-center bg-gray-50 rounded-xl px-4 py-8">
         <div className="w-full max-w-md my-8">
           <Carousel
             images={[
@@ -49,31 +58,19 @@ function Cleaning() {
             ]}
           />
         </div>
-        <Table>
-          <Table.Head>
-            <Table.Row>
-              <Table.Cell>Service</Table.Cell>
-              <Table.Cell>Type</Table.Cell>
-              <Table.Cell>Description</Table.Cell>
-            </Table.Row>
-          </Table.Head>
-          <Table.Body>
-            {contentTypes.map((service) => (
-              <Table.Row key={service.id}>
-                <Table.Cell>{service.name}</Table.Cell>
-                <Table.Cell>{service.type}</Table.Cell>
-                <Table.Cell>{service.description}</Table.Cell>
-              </Table.Row>
-            ))}
-          </Table.Body>
-        </Table>
-      </div>
-      <div className="mt-8 ">
-        <Link to="/contact-me">
-          <button className="block w-full text-center px-4 py-3 bg-green-600 text-white rounded font-semibold transition">
-            Click here to book !
-          </button>
-        </Link>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
+          {contentTypes.map((service) => (
+            <PricingCard
+              key={service.id}
+              title={service.name}
+              description={[`Type: ${service.type}`, ...service.description]}
+              pricing={[]}
+              buttonLabel="Book this service"
+              buttonTo="/contact-me"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
